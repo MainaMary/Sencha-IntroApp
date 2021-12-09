@@ -105,6 +105,13 @@ Ext.define('IntroApp.view.main.Main', {
         iconCls : 'fa-users',
         items : [{
             xtype: 'otherlist'
+        }],
+        bbar: [{
+            xtype: 'button',
+            text: 'Add new',
+            buttonDefaultColor: "#000",
+            handler : 'handleFormData'
+            
         }]
 
     }
