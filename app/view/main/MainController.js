@@ -33,8 +33,28 @@ Ext.define('IntroApp.view.main.MainController', {
         alert('clicked');
     },
     handleFormData: function (btn, event) {
-        var form = Ext.create('IntroApp.view.main.Form');
-        btn.up(form)
+        const newForm = Ext.create('IntroApp.view.main.Form');
+       newForm.show()
+    },
+    onSaveData: function(){
+       
+        var view = this.getView()
+        grid=view.down('grid')
+        store= grid.getStore()
+        var form = view.down('formpanel')
+        if(form.isValid()){
+            var data= form.getValues(),
+            storeData = []
+            storeData.push(data)
+            store.loadData(storeData, true)
+
+        }else { // display error alert if the data is invalid
+        Ext.Msg.alert('Invalid Data', 'Please correct form errors.')
+    }
+    },
+
+    handleEdit: function(btn, e){
+   alert('Edit details')
     },
     onTabChange: function (panel, newC, old) {
         alert('tab-changed');
