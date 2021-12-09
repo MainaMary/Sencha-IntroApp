@@ -2,36 +2,39 @@ Ext.define('IntroApp.view.main.Form', {
     extend: 'Ext.form.Panel',
     xtype: 'formPanel',
     floating: true,
-    draggable: true,
+    
     modal: true,
     closable: true,
-    resizable: true,
-    bodyPadding: 5,
+    bodyPadding: 10,
     padding: 5,
-    title: 'My Form',
+    title: 'Product Form',
     items: [
         {
             xtype: 'textfield',
             fieldLabel: "Name",
-            name: 'names',
-            itemId: 'nameField'
+            name: 'name',
+            required: true
+            
         },
         {
             xtype: 'textfield',
-            fieldLabel: "Email",
-            name: 'email'
+            fieldLabel: "category",
+            name: 'category',
+            required: true
         },
         {
             xtype: 'textfield',
-            fieldLabel: "Email",
-            name: 'email',
-            itemId: 'email2'
+            fieldLabel: "status",
+            name: 'status',
+            required: true
+        
         },
 
     ],
     bbar: [{
         xtype: 'button',
-        text: 'Submit'
+        text: 'Submit',
+        handler: "onSaveData"
     }]
 
 

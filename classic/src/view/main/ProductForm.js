@@ -28,10 +28,26 @@ Ext.define('IntroApp.view.main.ProductForm', {
         },
 
     ],
-    bbar: [{
+ bbar: [
+       {
+           xtype: 'button',
+           text: 'Edit',
+           handler: 'handleEdit'
+       },
+       {
         xtype: 'button',
-        text: 'Submit'
-    }]
+        text: 'Delete',
+    
+    },
+    {
+        xtype: 'button',
+        text: 'Cancel',
+        
+    }
+   ]
+   
+   
+    
 
 
 })

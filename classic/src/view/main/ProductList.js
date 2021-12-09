@@ -20,9 +20,16 @@
     },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name' },
-        { text: 'Category', dataIndex: 'category', flex: 1 },
-        { text: 'Status', dataIndex: 'status', flex: 1 }
+        { text: 'Name',  dataIndex: 'name'
+      
+    
+    },
+        { text: 'Category', dataIndex: 'category', flex: 1
+     
+    },
+        { text: 'Status', dataIndex: 'status', flex: 1
+       
+    }
     ],
 
     
