@@ -109,7 +109,6 @@ Ext.define('IntroApp.view.main.Main', {
         bbar: [{
             xtype: 'button',
             text: 'Add new',
-            buttonDefaultColor: "#000",
             handler : 'handleFormData'
             
         }]
