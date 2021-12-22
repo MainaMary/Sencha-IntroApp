@@ -32,11 +32,13 @@ Ext.define('IntroApp.view.main.ProductForm', {
        {
            xtype: 'button',
            text: 'Edit',
-           handler: 'handleEdit'
+           handler: 'handleEdit',
+           style: 'background-color:blue; background-image: none;'
        },
        {
         xtype: 'button',
         text: 'Delete',
+        style: 'background-color: red; background-image: none;'
     
     },
     {

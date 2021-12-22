@@ -36,6 +36,7 @@ Ext.define('IntroApp.view.main.MainController', {
         const newForm = Ext.create('IntroApp.view.main.Form');
        newForm.show()
     },
+    
     onSaveData: function(){
        
         var view = this.getView()
@@ -43,6 +44,13 @@ Ext.define('IntroApp.view.main.MainController', {
         store= grid.getStore()
         var form = view.down('formpanel')
         if(form.isValid()){
+            // form.submit({
+            //     url: 'localhost....',
+            //     params: {
+            //         foo: 'bar'
+            //     }
+            // });
+            
             var data= form.getValues(),
             storeData = []
             storeData.push(data)
@@ -54,6 +62,7 @@ Ext.define('IntroApp.view.main.MainController', {
     },
 
     handleEdit: function(btn, e){
+        
    alert('Edit details')
     },
     onTabChange: function (panel, newC, old) {
